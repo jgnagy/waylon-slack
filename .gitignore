@@ -1,0 +1,14 @@
+/.bundle/
+/.yardoc
+/_yardoc/
+/coverage/
+/doc/
+/pkg/
+/spec/reports/
+/tmp/
+
+# Rackup testing in this repo
+*.ru
+
+# rspec failure tracking
+.rspec_status
