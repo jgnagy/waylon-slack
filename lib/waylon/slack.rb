@@ -4,7 +4,7 @@ require "waylon/core"
 require "slack-ruby-client"
 
 ::Slack.configure do |conf|
-  conf.token = ENV["SLACK_OAUTH_TOKEN"]
+  conf.token = ENV.fetch("SLACK_OAUTH_TOKEN", nil)
   conf.logger = Waylon::Logger.logger
 end
 

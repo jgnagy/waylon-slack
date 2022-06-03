@@ -16,7 +16,7 @@ RSpec.describe Waylon::Slack::Channel do
           "value" => "The main channel"
         }
       }
-      Waylon::Slack::Channel.new(data: data)
+      Waylon::Slack::Channel.new(data:)
     end
 
     it "provides the slack channel name" do
@@ -48,7 +48,7 @@ RSpec.describe Waylon::Slack::Channel do
           "value" => "Only for l33t h4x0rs"
         }
       }
-      Waylon::Slack::Channel.new(data: data)
+      Waylon::Slack::Channel.new(data:)
     end
 
     it "provides the slack channel name" do
@@ -72,7 +72,7 @@ RSpec.describe Waylon::Slack::Channel do
         "is_user_deleted" => false,
         "user" => "U1234"
       }
-      Waylon::Slack::Channel.new(data: data)
+      Waylon::Slack::Channel.new(data:)
     end
 
     it "determines if a channel is private (based on Waylon's definition)" do

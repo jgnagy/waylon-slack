@@ -39,7 +39,7 @@ module Waylon
       # @return [void]
       def self.private_reply(request, text)
         message = message_from_request(request)
-        message.author.dm(text: text)
+        message.author.dm(text:)
       end
 
       # Provides a simple means to privately reply to the author of a Message using Blocks
@@ -48,7 +48,7 @@ module Waylon
       # @return [void]
       def self.private_reply_with_blocks(request, blocks)
         message = message_from_request(request)
-        message.author.dm(blocks: blocks)
+        message.author.dm(blocks:)
       end
 
       # Allows reacting to a request via the Sense's own mechanism
@@ -66,7 +66,7 @@ module Waylon
       # @return [void]
       def self.reply(request, text)
         message = message_from_request(request)
-        message.channel.post(text: text)
+        message.channel.post(text:)
       end
 
       # Reply to a Message in a Channel with some blocks
@@ -75,7 +75,7 @@ module Waylon
       # @return [void]
       def self.reply_with_blocks(request, blocks)
         message = message_from_request(request)
-        message.channel.post(blocks: blocks)
+        message.channel.post(blocks:)
       end
 
       # Executed by Resque, this is how this Sense determines what to do with an incoming request
@@ -106,7 +106,7 @@ module Waylon
       # @return [void]
       def self.threaded_reply(request, text)
         message = message_from_request(request)
-        message.channel.post(text: text, thread: message.thread_parent)
+        message.channel.post(text:, thread: message.thread_parent)
       end
 
       # Required by the Waylon framework, this provides the Sense's own Message class
