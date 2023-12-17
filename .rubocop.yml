@@ -1,6 +1,7 @@
 AllCops:
   TargetRubyVersion: 3.1
   NewCops: enable
+  SuggestExtensions: false
 
 Style/MixinUsage:
   Exclude:
@@ -36,3 +37,6 @@ Metrics/BlockLength:
   Exclude:
   - "**/*_spec.rb"
   - "*.gemspec"
+
+Gemspec/DevelopmentDependencies:
+  Enabled: false

@@ -10,7 +10,7 @@ module Waylon
       # @raise [Slack::Web::Api::Errors::ChannelNotFound] When the channel doesn't exist
       # @return [Channel]
       def self.from_name(name)
-        name = name.start_with?("#") ? name : "##{name}"
+        name = "##{name}" unless name.start_with?("#")
         raw = sense.client.conversations_info(channel: name)
         new(raw["channel"]["id"], data: raw["channel"])
       end
