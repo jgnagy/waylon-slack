@@ -21,4 +21,5 @@ require "waylon/slack"
 require "irb"
 
 include Waylon
+
 IRB.start(__FILE__)
